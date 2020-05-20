@@ -17,4 +17,4 @@
 [string]$plexRESTAddr   = "library/sections/6/all"
 [array]$data = Invoke-WebRequest -Uri   "http://$($localPlexAddr):32400/$($plexRESTAddr)" -Method get -headers @{'X-Plex-Token'=$authToken}
 [xml]$apiContent = $data.Content
-$apiContent.MediaContainer.Directory[10].role #.Video[0]
+$apiContent.MediaContainer.Directory[0].role #.Video[0]
